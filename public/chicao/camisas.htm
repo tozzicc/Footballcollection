@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camisas</title>
+    <link rel="stylesheet" href="/modern-legacy.css">
+</head>
+<body class="legacy-page">
+    <header>
+        <h1>Camisas</h1>
+    </header>
+    <main>
+        <div class="gallery cols-4">
+    <div class="item ">
+        
+        <div class="image-wrapper">
+          <img src="../camisas/brasil/saopaulo/3850.JPG" alt="Item" loading="lazy">
+        </div>
+        
+        
+    </div>
+  
+    <div class="item ">
+        
+        <div class="image-wrapper">
+          <img src="../camisas/brasil/saopaulo/3851.JPG" alt="Item" loading="lazy">
+        </div>
+        
+        
+    </div>
+  
+    <div class="item ">
+        
+        <div class="image-wrapper">
+          <img src="camisas/jhg_005.jpg" alt="Item" loading="lazy">
+        </div>
+        
+        
+    </div>
+  
+    <div class="item ">
+        
+        <div class="image-wrapper">
+          <img src="camisas/jhg_008.jpg" alt="Item" loading="lazy">
+        </div>
+        
+        
+    </div>
+  
+    <div class="item ">
+        
+        <div class="image-wrapper">
+          <img src="camisas/jhg_002.jpg" alt="Item" loading="lazy">
+        </div>
+        
+        
+    </div>
+  
+    <div class="item ">
+        
+        <div class="image-wrapper">
+          <img src="camisas/jhg_003.jpg" alt="Item" loading="lazy">
+        </div>
+        
+        
+    </div>
+  
+    <div class="item ">
+        
+        <div class="image-wrapper">
+          <img src="camisas/homenagem.jpg" alt="Item" loading="lazy">
+        </div>
+        
+        
+    </div>
+  
+    <div class="item ">
+        
+        <div class="image-wrapper">
+          <img src="../camisas/brasil/selecao/3845.JPG" alt="Item" loading="lazy">
+        </div>
+        
+        
+    </div>
+  
+    <div class="item ">
+        
+        <div class="image-wrapper">
+          <img src="../camisas/brasil/selecao/3844.JPG" alt="Item" loading="lazy">
+        </div>
+        
+        
+    </div>
+  
+    <div class="item ">
+        
+        <div class="image-wrapper">
+          <img src="../camisas/brasil/selecao/0001.jpg" alt="Item" loading="lazy">
+        </div>
+        
+        
+    </div>
+  
+    <div class="item ">
+        
+        <div class="image-wrapper">
+          <img src="camisas/xcv_003.jpg" alt="Item" loading="lazy">
+        </div>
+        
+        
+    </div>
+  
+    <div class="item ">
+        
+        <div class="image-wrapper">
+          <img src="camisas/xcv_006.jpg" alt="Item" loading="lazy">
+        </div>
+        
+        
+    </div>
+  
+    <div class="item ">
+        
+        <div class="image-wrapper">
+          <img src="../camisas/brasil/atletico/coppa012.jpg" alt="Item" loading="lazy">
+        </div>
+        
+        
+    </div>
+  
+    <div class="item ">
+        
+        <div class="image-wrapper">
+          <img src="../camisas/brasil/atletico/coppa013.jpg" alt="Item" loading="lazy">
+        </div>
+        
+        
+    </div>
+  
+    <div class="item ">
+        
+        <div class="image-wrapper">
+          <img src="../camisas/brasil/atletico/atletico_m.g._1980_chicao_camp.brasileiro.jpg" alt="Item" loading="lazy">
+        </div>
+        
+        
+    </div>
+  
+    <div class="item ">
+        
+        <div class="image-wrapper">
+          <img src="../camisas/brasil/atletico/atletico_m.g._1980_chicao_camp.brasileiro_(1).jpg" alt="Item" loading="lazy">
+        </div>
+        
+        
+    </div>
+  </div>
+        
+        
+        
+    </main>
+    <footer>
+        <a href="javascript:history.back()" class="back-link">VOLTAR / BACK</a>
+    </footer>
+    
+    
+    <script>
+      // Navigation Bridge for React Router
+      document.addEventListener('click', (e) => {
+        const link = e.target.closest('a');
+        if (link && link.href && link.href.startsWith(window.location.origin)) {
+          if (link.href.includes('javascript') || link.href.includes('#')) return;
+          const path = link.href.replace(window.location.origin, '');
+          window.parent.postMessage({ type: 'NAVIGATE', path }, '*');
+        }
+      });
+
+      // Height Reporting for Auto-Resize
+      const sendHeight = () => {
+        const height = Math.max(
+          document.body.scrollHeight, 
+          document.documentElement.scrollHeight,
+          document.body.offsetHeight,
+          document.documentElement.offsetHeight
+        );
+        window.parent.postMessage({ type: 'RESIZE', height }, '*');
+      };
+      window.addEventListener('load', sendHeight);
+      window.addEventListener('resize', sendHeight);
+      setTimeout(sendHeight, 500);
+      setInterval(sendHeight, 2000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTENT</title>
+    <link rel="stylesheet" href="/modern-legacy.css">
+</head>
+<body class="legacy-page">
+    <header>
+        <h1>CONTENT</h1>
+    </header>
+    <main>
+        <div class="gallery">
+    <div class="item is-logo">
+        
+        <div class="image-wrapper">
+          <img src="camisas/bandeiras/italia02.gif" alt="Item" loading="lazy">
+        </div>
+        
+        <div class="caption">Logo</div>
+    </div>
+  
+    <div class="item is-logo">
+        
+        <div class="image-wrapper">
+          <img src="camisas/bandeiras/brasil02.gif" alt="Item" loading="lazy">
+        </div>
+        
+        <div class="caption">Logo</div>
+    </div>
+  
+    <div class="item is-logo">
+        
+        <div class="image-wrapper">
+          <img src="camisas/bandeiras/inglaterra04.gif" alt="Item" loading="lazy">
+        </div>
+        
+        <div class="caption">Logo</div>
+    </div>
+  </div>
+        
+        
+    <div class="decade-section">
+        <div class="decade-title">Outros / Others</div>
+        <div class="link-grid">
+            <a href="benvenuto.htm" class="nav-button">PROSEGUIRE</a><a href="bemvindo.htm" class="nav-button">PROSSEGUIR</a><a href="welcome.htm" class="nav-button">NEXT</a>
+        </div>
+    </div>
+  
+        
+    </main>
+    <footer>
+        <a href="javascript:history.back()" class="back-link">VOLTAR / BACK</a>
+    </footer>
+    <script>
+      // Navigation Bridge for React Router
+      document.addEventListener('click', (e) => {
+        const link = e.target.closest('a');
+        if (link && link.href && link.href.startsWith(window.location.origin)) {
+          if (link.href.includes('javascript') || link.href.includes('#')) return;
+          const path = link.href.replace(window.location.origin, '');
+          window.parent.postMessage({ type: 'NAVIGATE', path }, '*');
+        }
+      });
+    </script>
+</body>
+</html>

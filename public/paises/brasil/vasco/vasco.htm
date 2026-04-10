@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VASCO DA GAMA</title>
+    <link rel="stylesheet" href="/modern-legacy.css">
+</head>
+<body class="legacy-page">
+    <header>
+        <h1>VASCO DA GAMA</h1>
+    </header>
+    <main>
+        
+        
+        
+    <div class="decade-section">
+        <div class="decade-title">1970s</div>
+        <div class="link-grid">
+            <a href="1972.htm" class="nav-button">1972</a>
+        </div>
+    </div>
+  
+    <div class="decade-section">
+        <div class="decade-title">1980s</div>
+        <div class="link-grid">
+            <a href="1980.htm" class="nav-button">1980</a><a href="1981.htm" class="nav-button">1981</a><a href="1984.htm" class="nav-button">1984</a><a href="1985.htm" class="nav-button">1985</a><a href="1986.htm" class="nav-button">1986</a><a href="1987.htm" class="nav-button">1987</a>
+        </div>
+    </div>
+  
+    <div class="decade-section">
+        <div class="decade-title">1990s</div>
+        <div class="link-grid">
+            <a href="1998.htm" class="nav-button">1998</a>
+        </div>
+    </div>
+  
+    <div class="decade-section">
+        <div class="decade-title">2000s</div>
+        <div class="link-grid">
+            <a href="2000.htm" class="nav-button">2000</a><a href="2002.htm" class="nav-button">2002</a><a href="2003.htm" class="nav-button">2003</a><a href="2004.htm" class="nav-button">2004</a><a href="2005.htm" class="nav-button">2005</a><a href="2006.htm" class="nav-button">2006</a><a href="2007.htm" class="nav-button">2007</a>
+        </div>
+    </div>
+  
+    <div class="decade-section">
+        <div class="decade-title">2010s</div>
+        <div class="link-grid">
+            <a href="2012.htm" class="nav-button">2012</a><a href="2015.htm" class="nav-button">2015</a>
+        </div>
+    </div>
+  
+    <div class="decade-section">
+        <div class="decade-title">2020s</div>
+        <div class="link-grid">
+            <a href="2023.htm" class="nav-button">2023</a><a href="2024.htm" class="nav-button">2024</a><a href="2025.htm" class="nav-button">2025</a>
+        </div>
+    </div>
+  
+    </main>
+    <footer>
+        <a href="javascript:history.back()" class="back-link">VOLTAR / BACK</a>
+    </footer>
+    <script>
+      document.addEventListener('click', (e) => {
+        const link = e.target.closest('a');
+        if (link && link.href && link.href.startsWith(window.location.origin)) {
+          if (link.href.includes('javascript') || link.href.includes('#')) return;
+          const path = link.href.replace(window.location.origin, '');
+          window.parent.postMessage({ type: 'NAVIGATE', path }, '*');
+        }
+      });
+      const sh = () => { window.parent.postMessage({ type: 'RESIZE', height: document.documentElement.scrollHeight }, '*'); };
+      window.addEventListener('load', sh); window.addEventListener('resize', sh); setTimeout(sh, 500);
+    </script>
+</body>
+</html>

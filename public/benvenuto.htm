@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BENVENUTO</title>
+    <link rel="stylesheet" href="/modern-legacy.css">
+</head>
+<body class="legacy-page">
+    <header>
+        <h1>BENVENUTO</h1>
+    </header>
+    <main>
+        <div class="gallery cols-3">
+    <div class="item is-logo">
+        <a href="mailto:mmmatta@uol.com.br">
+        <div class="image-wrapper">
+          <img src="camisas/mail48.gif" alt="BENVENUTI A FOOTBALL COLLECTION, QUESTO SITO MOSTRA UN PICCOLO E PIACEVOLE PEZZO DI STORIA DEL CALCIO, ATTRAVERSO ALCUNE MAGLIE D'EPOCA E DI OGGI. ..." loading="lazy">
+        </div>
+        </a>
+        <div class="caption">BENVENUTI A FOOTBALL COLLECTION, QUESTO SITO MOSTRA UN PICCOLO E PIACEVOLE PEZZO DI STORIA DEL CALCIO, ATTRAVERSO ALCUNE MAGLIE D'EPOCA E DI OGGI. ...</div>
+    </div>
+  </div>
+        
+        
+    <div class="decade-section">
+        <div class="decade-title">Outros / Others</div>
+        <div class="link-grid">
+            <a href="content.htm" class="nav-button">RITORNARE</a><a href="paises.htm" class="nav-button">PROSEGUIRE</a>
+        </div>
+    </div>
+  
+        
+    </main>
+    <footer>
+        <a href="javascript:history.back()" class="back-link">VOLTAR / BACK</a>
+    </footer>
+    
+    
+    <script>
+      // Navigation Bridge for React Router
+      document.addEventListener('click', (e) => {
+        const link = e.target.closest('a');
+        if (link && link.href && link.href.startsWith(window.location.origin)) {
+          if (link.href.includes('javascript') || link.href.includes('#')) return;
+          const path = link.href.replace(window.location.origin, '');
+          window.parent.postMessage({ type: 'NAVIGATE', path }, '*');
+        }
+      });
+
+      // Height Reporting for Auto-Resize
+      const sendHeight = () => {
+        const height = Math.max(
+          document.body.scrollHeight, 
+          document.documentElement.scrollHeight,
+          document.body.offsetHeight,
+          document.documentElement.offsetHeight
+        );
+        window.parent.postMessage({ type: 'RESIZE', height }, '*');
+      };
+      window.addEventListener('load', sendHeight);
+      window.addEventListener('resize', sendHeight);
+      setTimeout(sendHeight, 500);
+      setInterval(sendHeight, 2000);
+    </script>
+</body>
+</html>
