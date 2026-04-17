@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
@@ -6,64 +6,73 @@
     <title>FLUMINENSE</title>
     <link rel="stylesheet" href="/modern-legacy.css">
 </head>
-<body class="legacy-page">
+<body class="legacy-page align-left">
     <header>
         <h1>FLUMINENSE</h1>
     </header>
+        <div class="top-centered-logo">
+            <div class="item is-logo">
+                <div class="image-wrapper">
+                    <img src="../../../logos/fluminense.gif" alt="Logo" loading="lazy">
+                </div>
+            </div>
+        </div>
     <main>
         
         
         
     <div class="decade-section">
-        <div class="decade-title">1960s</div>
+        <div class="decade-title">1960</div>
         <div class="link-grid">
             <a href="1960.htm" class="nav-button">1960</a>
         </div>
     </div>
   
     <div class="decade-section">
-        <div class="decade-title">1970s</div>
+        <div class="decade-title">1970</div>
         <div class="link-grid">
             <a href="1970.htm" class="nav-button">1970</a><a href="1975.htm" class="nav-button">1975</a><a href="1976.htm" class="nav-button">1976</a><a href="1977.htm" class="nav-button">1977</a><a href="1978.htm" class="nav-button">1978</a>
         </div>
     </div>
   
     <div class="decade-section">
-        <div class="decade-title">1980s</div>
+        <div class="decade-title">1980</div>
         <div class="link-grid">
             <a href="1980.htm" class="nav-button">1980</a><a href="1988.htm" class="nav-button">1988</a>
         </div>
     </div>
   
     <div class="decade-section">
-        <div class="decade-title">1990s</div>
+        <div class="decade-title">1990</div>
         <div class="link-grid">
             <a href="1992.htm" class="nav-button">1992</a>
         </div>
     </div>
   
     <div class="decade-section">
-        <div class="decade-title">2000s</div>
+        <div class="decade-title">2000</div>
         <div class="link-grid">
             <a href="2001.htm" class="nav-button">2001</a><a href="2002.htm" class="nav-button">2002</a><a href="2003.htm" class="nav-button">2003</a><a href="2008.htm" class="nav-button">2008</a>
         </div>
     </div>
   
     <div class="decade-section">
-        <div class="decade-title">2010s</div>
+        <div class="decade-title">2010</div>
         <div class="link-grid">
             <a href="2012.htm" class="nav-button">2012</a><a href="2013.htm" class="nav-button">2013</a><a href="2015.htm" class="nav-button">2015</a><a href="2016.htm" class="nav-button">2016</a><a href="2017.htm" class="nav-button">2017</a>
         </div>
     </div>
   
     <div class="decade-section">
-        <div class="decade-title">2020s</div>
+        <div class="decade-title">2020</div>
         <div class="link-grid">
             <a href="2021.htm" class="nav-button">2021</a><a href="2023.htm" class="nav-button">2023</a>
         </div>
     </div>
   
     </main>
+    
+    
     <footer>
         <a href="javascript:history.back()" class="back-link">VOLTAR / BACK</a>
     </footer>
@@ -78,6 +87,8 @@
       });
       const sh = () => { window.parent.postMessage({ type: 'RESIZE', height: document.documentElement.scrollHeight }, '*'); };
       window.addEventListener('load', sh); window.addEventListener('resize', sh); setTimeout(sh, 500);
+      setInterval(sh, 2000);
     </script>
 </body>
 </html>
+

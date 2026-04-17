@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
@@ -6,15 +6,24 @@
     <title>ROMA</title>
     <link rel="stylesheet" href="/modern-legacy.css">
 </head>
-<body class="legacy-page">
+<body class="legacy-page align-left">
     <header>
         <h1>ROMA</h1>
     </header>
+        <div class="top-centered-logo">
+            <div class="item is-logo">
+                <div class="image-wrapper">
+                    <img src="../../../logos/roma.gif" alt="Logo" loading="lazy">
+                </div>
+            </div>
+        </div>
     <main>
         
         
         
     </main>
+    
+    
     <footer>
         <a href="javascript:history.back()" class="back-link">VOLTAR / BACK</a>
     </footer>
@@ -29,6 +38,8 @@
       });
       const sh = () => { window.parent.postMessage({ type: 'RESIZE', height: document.documentElement.scrollHeight }, '*'); };
       window.addEventListener('load', sh); window.addEventListener('resize', sh); setTimeout(sh, 500);
+      setInterval(sh, 2000);
     </script>
 </body>
 </html>
+

@@ -1,0 +1,298 @@
+/* v1.0.1 - Force Refresh */
+/* modern-legacy.css */
+:root {
+  --bg-color: #000099;
+  --text-color: #FFFFFF;
+  --accent-color: #CCFFFF;
+  --link-color: #FFFFFF;
+  --link-hover-color: #99FFFF;
+  --btn-bg: rgba(255, 255, 255, 0.1);
+  --btn-hover: rgba(255, 255, 255, 0.2);
+  --font-family: 'Verdana', sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* header and h1 styling */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-style: italic;
+  text-transform: uppercase;
+  margin: 0;
+  border-bottom: 2px solid var(--accent-color);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* Reduced gap */
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.team-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 0 10px 20px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.shirt-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.shirt-group:last-of-type {
+  border-bottom: none;
+}
+
+.group-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.shirt-group .item {
+  flex: 0 1 300px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--btn-bg);
+  padding: 10px;
+  border: 1px solid rgba(204, 255, 255, 0.3);
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+  width: 100%; /* Fill grid cell */
+  box-sizing: border-box;
+}
+
+.item.is-logo {
+  grid-column: span 3;
+  justify-self: center;
+  max-width: 500px;
+  background-color: transparent;
+  border-color: rgba(255,255,255,0.1);
+  margin-bottom: 20px;
+  width: auto;
+}
+
+.item.is-logo .image-wrapper {
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.cols-4 .item.is-logo {
+  grid-column: span 4;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  background-color: var(--btn-hover);
+  border-color: var(--accent-color);
+}
+
+.item .image-wrapper {
+  width: 100%;
+  height: 280px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0px;
+}
+
+.item .image-wrapper.team-image {
+  height: auto;
+  min-height: 200px;
+  max-height: 400px;
+}
+
+.item .image-wrapper.team-image img {
+  max-height: 400px;
+  width: auto;
+  max-width: 100%;
+}
+
+.item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.group-caption {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  text-align: center;
+  color: var(--text-color);
+  max-width: 900px;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  width: fit-content;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+.caption {
+  display: none; /* Hide 'Item' text */
+}
+
+/* -------------------------------------------------------------------------
+   PROTECTED LAYOUT SECTIONS - DO NOT MODIFY WITHOUT MANUAL REVIEW
+   These rules ensure alignment for specific federation pages (Brasil, Italy, Others)
+   ------------------------------------------------------------------------- */
+.decade-section {
+  width: 100%;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+body.align-left .decade-section { 
+  text-align: left !important; /* Locked alignment */
+}
+
+.decade-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-style: italic;
+  color: var(--accent-color);
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--accent-color);
+  padding: 0 15px 5px 15px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.link-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+}
+
+body.align-left .link-grid {
+  justify-content: flex-start !important; /* Locked alignment */
+}
+/* ------------------------------------------------------------------------- */
+
+.nav-button {
+  background-color: var(--btn-bg);
+  color: var(--text-color);
+  padding: 10px 15px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.2);
+  font-size: 1rem;
+  transition: all 0.2s;
+  text-decoration: none;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.nav-button:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  text-decoration: none;
+}
+
+footer {
+  margin-top: 60px;
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  text-align: center;
+}
+
+.back-link {
+  background-color: var(--btn-bg);
+  color: var(--text-color);
+  padding: 8px 30px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.2);
+  font-size: 1rem;
+  transition: all 0.2s;
+  text-decoration: none;
+  font-weight: bold;
+  font-style: italic;
+  display: inline-block;
+}
+
+.back-link:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  text-decoration: none;
+}
+
+/* Responsiveness adjustments */
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+  
+  .item.is-logo, .cols-4 .item.is-logo {
+    grid-column: span 1;
+  }
+  
+  .item .image-wrapper {
+    height: 200px;
+  }
+  
+  .shirt-group .item {
+    flex: 1 1 100%;
+  }
+  
+  .group-caption {
+    font-size: 0.8rem;
+    padding: 5px 15px;
+  }
+}

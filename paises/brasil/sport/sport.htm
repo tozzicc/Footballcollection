@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
@@ -6,29 +6,38 @@
     <title>BULGARIA</title>
     <link rel="stylesheet" href="/modern-legacy.css">
 </head>
-<body class="legacy-page">
+<body class="legacy-page align-left">
     <header>
         <h1>BULGARIA</h1>
     </header>
+        <div class="top-centered-logo">
+            <div class="item is-logo">
+                <div class="image-wrapper">
+                    <img src="../../../logos/sport.gif" alt="Logo" loading="lazy">
+                </div>
+            </div>
+        </div>
     <main>
         
         
         
     <div class="decade-section">
-        <div class="decade-title">2010s</div>
+        <div class="decade-title">2010</div>
         <div class="link-grid">
             <a href="2015.htm" class="nav-button">2015</a><a href="2017.htm" class="nav-button">2017</a><a href="2019.htm" class="nav-button">2019</a>
         </div>
     </div>
   
     <div class="decade-section">
-        <div class="decade-title">2020s</div>
+        <div class="decade-title">2020</div>
         <div class="link-grid">
             <a href="2021.htm" class="nav-button">2021</a>
         </div>
     </div>
   
     </main>
+    
+    
     <footer>
         <a href="javascript:history.back()" class="back-link">VOLTAR / BACK</a>
     </footer>
@@ -43,6 +52,8 @@
       });
       const sh = () => { window.parent.postMessage({ type: 'RESIZE', height: document.documentElement.scrollHeight }, '*'); };
       window.addEventListener('load', sh); window.addEventListener('resize', sh); setTimeout(sh, 500);
+      setInterval(sh, 2000);
     </script>
 </body>
 </html>
+
