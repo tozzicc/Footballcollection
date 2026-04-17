@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +6,7 @@
     <title>SÃO PAULO</title>
     <link rel="stylesheet" href="/modern-legacy.css">
 </head>
-<body class="legacy-page">
+<body class="legacy-page align-left">
     <header>
         <h1>SÃO PAULO</h1>
     </header>
@@ -15,13 +15,15 @@
         
         
     <div class="decade-section">
-        <div class="decade-title">2010s</div>
+        <div class="decade-title">2010</div>
         <div class="link-grid">
             <a href="2014.html" class="nav-button">2014</a>
         </div>
     </div>
   
     </main>
+    
+    
     <footer>
         <a href="javascript:history.back()" class="back-link">VOLTAR / BACK</a>
     </footer>
@@ -36,6 +38,8 @@
       });
       const sh = () => { window.parent.postMessage({ type: 'RESIZE', height: document.documentElement.scrollHeight }, '*'); };
       window.addEventListener('load', sh); window.addEventListener('resize', sh); setTimeout(sh, 500);
+      setInterval(sh, 2000);
     </script>
 </body>
 </html>
+
