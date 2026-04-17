@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIACENZA</title>
+    <link rel="stylesheet" href="/modern-legacy.css">
+</head>
+<body class="legacy-page">
+    <header>
+        <h1>PIACENZA</h1>
+    </header>
+    <main>
+        <div class="gallery cols-3">
+    <div class="item ">
+        
+        <div class="image-wrapper">
+          <img src="imagens/07_08/piacenza.jpg" alt="Item" loading="lazy">
+        </div>
+        
+        
+    </div>
+  
+    <div class="item ">
+        
+        <div class="image-wrapper">
+          <img src="imagens/11_08/piacenza_garilli.jpg" alt="Item" loading="lazy">
+        </div>
+        
+        
+    </div>
+  
+    <div class="item ">
+        
+        <div class="image-wrapper">
+          <img src="imagens/11_08/leonardo1piacenza.jpg" alt="Item" loading="lazy">
+        </div>
+        
+        
+    </div>
+  </div>
+        
+        
+        
+    </main>
+    <footer>
+        <a href="javascript:history.back()" class="back-link">VOLTAR / BACK</a>
+    </footer>
+    
+    
+    <script>
+      // Navigation Bridge for React Router
+      document.addEventListener('click', (e) => {
+        const link = e.target.closest('a');
+        if (link && link.href && link.href.startsWith(window.location.origin)) {
+          if (link.href.includes('javascript') || link.href.includes('#')) return;
+          const path = link.href.replace(window.location.origin, '');
+          window.parent.postMessage({ type: 'NAVIGATE', path }, '*');
+        }
+      });
+
+      // Height Reporting for Auto-Resize
+      const sendHeight = () => {
+        const height = Math.max(
+          document.body.scrollHeight, 
+          document.documentElement.scrollHeight,
+          document.body.offsetHeight,
+          document.documentElement.offsetHeight
+        );
+        window.parent.postMessage({ type: 'RESIZE', height }, '*');
+      };
+      window.addEventListener('load', sendHeight);
+      window.addEventListener('resize', sendHeight);
+      setTimeout(sendHeight, 500);
+      setInterval(sendHeight, 2000);
+    </script>
+</body>
+</html>

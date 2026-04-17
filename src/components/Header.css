@@ -1,0 +1,24 @@
+.header-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000099;
+  padding: 20px 0;
+  border-bottom: 2px solid #0000FF;
+}
+
+.header-logo-link {
+  text-decoration: none;
+  display: block;
+}
+
+.header-title {
+  display: block;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-style: italic;
+  color: #FFFFFF;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,96 @@
+<!-- VERCEL-REFRESH-V2 -->
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COLLECTION</title>
+    <link rel="stylesheet" href="/paises.css">
+</head>
+<body class="legacy-page">
+    <header>
+        <h1>COLLECTION</h1>
+    </header>
+    <main>
+        <div class="gallery cols-3">
+    <div class="item is-logo">
+        <a href="paises/brasil/brazil.htm">
+        <div class="image-wrapper">
+          <img src="camisas/brasil02.gif" alt="BRASIL TEAMS" loading="lazy">
+        </div>
+        </a>
+        <div class="caption">BRASIL TEAMS</div>
+    </div>
+  
+    <div class="item is-logo">
+        <a href="paises/italia/italy.htm">
+        <div class="image-wrapper">
+          <img src="camisas/italia02.gif" alt="ITALY TEAMS" loading="lazy">
+        </div>
+        </a>
+        <div class="caption">ITALY TEAMS</div>
+    </div>
+  
+    <div class="item is-logo">
+        <a href="paises/outros/others.htm">
+        <div class="image-wrapper">
+          <img src="camisas/planeta03.gif" alt="OTHER TEAMS" loading="lazy">
+        </div>
+        </a>
+        <div class="caption">OTHER TEAMS</div>
+    </div>
+  </div>
+        
+    <div class="decade-section">
+        <div class="decade-title">Outros / Others</div>
+        <div class="link-grid">
+            <a href="pennants/pennants.htm" class="nav-button">PENNANTS</a><a href="flags/flags.htm" class="nav-button">FLAGS</a><a href="memorabilia/memorabilia.htm" class="nav-button">MEMORABILIA</a><a href="collection/links.htm" class="nav-button">LINKS AMICI</a><a href="content.htm" class="nav-button">ENTER</a>
+        </div>
+    </div>
+
+    <div class="bottom-item-section">
+        <div class="item">
+            <div class="image-wrapper">
+              <img src="chicao/0001.jpg" alt="Item" loading="lazy">
+            </div>
+        </div>
+    </div>
+
+    <div class="special-link-row">
+        <a href="chicao/chicao.htm" class="nav-button full-width">Link inteiramente dedicado à memória de meu grande amigo Chicão.</a>
+    </div>
+  
+    </main>
+    <footer>
+        <a href="javascript:history.back()" class="back-link">VOLTAR / BACK</a>
+    </footer>
+    
+    
+    <script>
+      // Navigation Bridge for React Router
+      document.addEventListener('click', (e) => {
+        const link = e.target.closest('a');
+        if (link && link.href && link.href.startsWith(window.location.origin)) {
+          if (link.href.includes('javascript') || link.href.includes('#')) return;
+          const path = link.href.replace(window.location.origin, '');
+          window.parent.postMessage({ type: 'NAVIGATE', path }, '*');
+        }
+      });
+
+      // Height Reporting for Auto-Resize
+      const sendHeight = () => {
+        const height = Math.max(
+          document.body.scrollHeight, 
+          document.documentElement.scrollHeight,
+          document.body.offsetHeight,
+          document.documentElement.offsetHeight
+        );
+        window.parent.postMessage({ type: 'RESIZE', height }, '*');
+      };
+      window.addEventListener('load', sendHeight);
+      window.addEventListener('resize', sendHeight);
+      setTimeout(sendHeight, 500);
+      setInterval(sendHeight, 2000);
+    </script>
+</body>
+</html>

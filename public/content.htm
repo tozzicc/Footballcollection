@@ -1,0 +1,83 @@
+<!-- VERCEL-REFRESH-V2 -->
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTENT</title>
+    <link rel="stylesheet" href="/content.css">
+
+    <link rel="stylesheet" href="/modern-legacy.css">
+</head>
+<body class="legacy-page">
+    <main>
+        <div class="language-section">
+            <p class="description">QUESTO SITO CONTIENE MAGLIE UFFICIALI DA CALCIO RIGOROSAMENTE PROVENIENTI DALLE SOCIETA' CALCISTICHE.</p>
+            <div class="action-row">
+                <a href="benvenuto.htm" class="action-link"><i>PROSEGUIRE</i></a>
+                <img src="camisas/italia02.gif" alt="IT" class="flag-icon">
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="language-section">
+            <p class="description">ESTE SITE CONTÊM CAMISAS OFICIAIS DE FUTEBOL RIGOROSAMENTE PROVENIENTES DOS CLUBES.</p>
+            <div class="action-row">
+                <a href="bemvindo.htm" class="action-link"><i>PROSSEGUIR</i></a>
+                <img src="camisas/brasil02.gif" alt="PT" class="flag-icon">
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="language-section">
+            <p class="description">THIS SITE CONTAINS OFFICIAL SOCCER SHIRTS RIGOROUSLY COMING FROM SOCCER CLUBS.</p>
+            <div class="action-row">
+                <a href="welcome.htm" class="action-link"><i>NEXT</i></a>
+                <img src="camisas/inglaterra04.gif" alt="EN" class="flag-icon">
+            </div>
+        </div>
+
+        <div class="decade-section">
+            <div class="decade-title">Outros / Others</div>
+            <div class="link-grid">
+                <a href="benvenuto.htm" class="nav-button">PROSEGUIRE</a>
+                <a href="bemvindo.htm" class="nav-button">PROSSEGUIR</a>
+                <a href="welcome.htm" class="nav-button">NEXT</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <a href="javascript:history.back()" class="back-link">VOLTAR / BACK</a>
+    </footer>
+    
+    
+    <script>
+      // Navigation Bridge for React Router
+      document.addEventListener('click', (e) => {
+        const link = e.target.closest('a');
+        if (link && link.href && link.href.startsWith(window.location.origin)) {
+          if (link.href.includes('javascript') || link.href.includes('#')) return;
+          const path = link.href.replace(window.location.origin, '');
+          window.parent.postMessage({ type: 'NAVIGATE', path }, '*');
+        }
+      });
+
+      // Height Reporting for Auto-Resize
+      const sendHeight = () => {
+        const height = Math.max(
+          document.body.scrollHeight, 
+          document.documentElement.scrollHeight,
+          document.body.offsetHeight,
+          document.documentElement.offsetHeight
+        );
+        window.parent.postMessage({ type: 'RESIZE', height }, '*');
+      };
+      window.addEventListener('load', sendHeight);
+      window.addEventListener('resize', sendHeight);
+      setTimeout(sendHeight, 500);
+      setInterval(sendHeight, 2000);
+    </script>
+</body>
+</html>

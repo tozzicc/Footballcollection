@@ -1,0 +1,27 @@
+.home-wrapper {
+  padding-bottom: 50px;
+}
+
+.home-gallery-table {
+  margin: 0 auto;
+  width: 760px;
+  border: 1px solid #0000FF;
+  border-collapse: collapse;
+}
+
+.home-gallery-table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.home-images-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-images-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

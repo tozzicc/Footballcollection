@@ -1,0 +1,72 @@
+<!-- VERCEL-REFRESH-V2 -->
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEM VINDO</title>
+    <link rel="stylesheet" href="/bemvindo.css">
+</head>
+<body class="legacy-page">
+    <main>
+        <div class="gallery cols-3">
+    <div class="item is-welcome">
+        <a href="mailto:mmmatta@uol.com.br">
+        <div class="image-wrapper">
+          <img src="camisas/mail48.gif" alt="Mail" loading="lazy">
+        </div>
+        </a>
+        <div class="caption">
+            <p>BENVINDOS A FOOTBALL COLLECTION, ESTE SITE MOSTRA UM PEQUENO E AGRADÁVEL PEDAÇO DE HISTÓRIA DO FUTEBOL DE ALGUMAS CAMISAS DE ONTEM E DE HOJE.</p>
+            <p>NASCI NA ITÁLIA, PRECISAMENTE EM TORINO, E AGORA RESIDO EM PIRACICABA - S.P, E TALVEZ PELA DISTÂNCIA, DECIDI CRIAR ESTE SITE ONDE SERÁ POSSÍVEL VER ALGUMAS RECORDAÇÕES DE UM PASSADO PRESENTE.</p>
+            <p>PROCURO CAMISAS DA JUVENTUS (ITÁLIA) E DO TORINO (ITÁLIA) PARA ACRESCENTAR À MINHA COLEÇÃO.</p>
+            <p>OBRIGADO A TODOS VOCÊS PELA VISITA AO SITE E QUALQUER COISA, NÃO EXITEM EM ME CONTATAR.</p>
+            <p style="text-align: right; margin-top: 20px;">ATÉ LOGO,<br>MAURO MATTA</p>
+        </div>
+    </div>
+  </div>
+        
+        
+    <div class="decade-section">
+        <div class="decade-title">Outros / Others</div>
+        <div class="link-grid">
+            <a href="content.htm" class="nav-button">ANTERIOR</a>
+            <a href="paises.htm" class="nav-button">PRÓXIMO</a>
+        </div>
+    </div>
+  
+        
+    </main>
+    <footer>
+        <a href="javascript:history.back()" class="back-link">VOLTAR / BACK</a>
+    </footer>
+    
+    
+    <script>
+      // Navigation Bridge for React Router
+      document.addEventListener('click', (e) => {
+        const link = e.target.closest('a');
+        if (link && link.href && link.href.startsWith(window.location.origin)) {
+          if (link.href.includes('javascript') || link.href.includes('#')) return;
+          const path = link.href.replace(window.location.origin, '');
+          window.parent.postMessage({ type: 'NAVIGATE', path }, '*');
+        }
+      });
+
+      // Height Reporting for Auto-Resize
+      const sendHeight = () => {
+        const height = Math.max(
+          document.body.scrollHeight, 
+          document.documentElement.scrollHeight,
+          document.body.offsetHeight,
+          document.documentElement.offsetHeight
+        );
+        window.parent.postMessage({ type: 'RESIZE', height }, '*');
+      };
+      window.addEventListener('load', sendHeight);
+      window.addEventListener('resize', sendHeight);
+      setTimeout(sendHeight, 500);
+      setInterval(sendHeight, 2000);
+    </script>
+</body>
+</html>
